@@ -1,0 +1,22 @@
+@import "partials/colors";
+@import "partials/typography";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/reset";
+
+/*******************
+* COMPONENTS
+********************/
+.container {
+	padding: $p-base;
+	margin: auto;
+
+	@include min-query($d-tablet) {
+		padding: $p-base * 2 $p-base * 5;
+		max-width: $d-tablet;
+	}
+
+	@include min-query($d-laptop) {
+		max-width: $d-laptop;
+	}
+}
