@@ -612,7 +612,7 @@ html {
   float: left;
   cursor: pointer;
   overflow: hidden;
-  width: calc(90%/4);
+  width: calc(90% / 4);
   max-height: 450px;
   min-width: 300px;
   background-color: white;
@@ -620,8 +620,8 @@ html {
 }
 
 .article-container__article__article1:hover, .article-container__article__article2:hover, .article-container__article__article3:hover, .article-container__article__article4:hover {
-  -webkit-animation: move .5s;
-          animation: move .5s;
+  -webkit-animation: move 0.5s;
+          animation: move 0.5s;
 }
 
 .article-container__article__article1 .img img, .article-container__article__article2 .img img, .article-container__article__article3 .img img, .article-container__article__article4 .img img {
@@ -679,6 +679,56 @@ footer
       justify-content: space-around;
 }
 
+.footer .horizentally a {
+  background-repeat: no-repeat;
+  height: 70px;
+  width: 70px;
+  display: block;
+  position: relative;
+  right: 35px;
+  top: 30px;
+}
+
+.footer .horizentally .fb {
+  background-image: url("../assets/icons/icon-facebook.svg");
+}
+
+.footer .horizentally .fb:hover {
+  background-image: url("../assets/icons/icon-facebook-green.svg");
+}
+
+.footer .horizentally .yt {
+  background-image: url("../assets/icons/icon-youtube.svg");
+}
+
+.footer .horizentally .yt:hover {
+  background-image: url("../assets/icons/icon-youtube-green.svg");
+}
+
+.footer .horizentally .tw {
+  background-image: url("../assets/icons/icon-twitter.svg");
+}
+
+.footer .horizentally .tw:hover {
+  background-image: url("../assets/icons/icon-twitter-green.svg");
+}
+
+.footer .horizentally .pt {
+  background-image: url("../assets/icons/icon-pinterest.svg");
+}
+
+.footer .horizentally .pt:hover {
+  background-image: url("../assets/icons/icon-pinterest-green.svg");
+}
+
+.footer .horizentally .ig {
+  background-image: url("../assets/icons/icon-instagram.svg");
+}
+
+.footer .horizentally .ig:hover {
+  background-image: url("../assets/icons/icon-instagram-green.svg");
+}
+
 .footer a {
   text-decoration: none;
 }
@@ -720,7 +770,7 @@ footer
 .footer li > a {
   display: block;
   color: white;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .footer .last-child {
