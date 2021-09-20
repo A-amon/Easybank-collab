@@ -179,6 +179,17 @@ html{
 		font-weight: $fw-bold;
 		font-size: 3rem;
 	}
+	@keyframes move {
+		0% {
+			transform: scale(1);
+		}
+		50%{
+			transform: scale(1.1);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
 	&__article {
 		width:100% ;
 		user-select: none;
@@ -196,7 +207,9 @@ html{
 			min-width: 300px;
 			background-color: $c-white;
 			border-radius: 8px;
-	
+			&:hover{
+				animation: move .5s;
+			}
 				.img {
 				img {
 					width: 100%;
@@ -236,14 +249,18 @@ footer
 	top: 2rem;
 }
 .footer {
-	height: 250px;
 	margin: 0;
-	padding: 2rem;
+	padding: 1.5rem;
 	background: $c-dark-blue;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 
+	
+		a{
+			text-decoration: none;
+		}
+	
 	.about > li:hover,
 	.careers > li:hover {
 		color: $c-lime-green;
