@@ -683,14 +683,9 @@ footer
   text-decoration: none;
 }
 
-.footer .about > li:hover,
-.footer .careers > li:hover {
+.footer .about > li > a:hover,
+.footer .careers > li > a:hover {
   color: #31d35c;
-  cursor: pointer;
-}
-
-.footer .horizentally > li:hover {
-  cursor: pointer;
 }
 
 .footer ul {
@@ -707,7 +702,7 @@ footer
           flex-direction: row;
 }
 
-.footer .horizentally li img {
+.footer .horizentally li > a > img {
   margin: 0 0.5rem;
 }
 
@@ -722,7 +717,8 @@ footer
   right: 3rem;
 }
 
-.footer li {
+.footer li > a {
+  display: block;
   color: white;
   margin: 1.5rem 0;
 }
@@ -736,6 +732,10 @@ footer
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 20%;
+}
+
+.footer .last-child li {
+  margin: 1rem 0.5rem;
 }
 
 .footer .last-child .right-reserved {
@@ -766,6 +766,7 @@ footer
 
 @media only screen and (max-width: 768px) {
   .footer {
+    overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -799,9 +800,6 @@ footer
             align-items: center;
     margin: auto !important;
     padding: 0;
-  }
-  li {
-    margin: 0.5rem !important;
   }
   .logo {
     position: relative;

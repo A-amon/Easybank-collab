@@ -261,21 +261,18 @@ footer
 			text-decoration: none;
 		}
 	
-	.about > li:hover,
-	.careers > li:hover {
+	.about > li>a:hover,
+	.careers > li>a:hover {
 		color: $c-lime-green;
-		cursor: pointer;
 	}
-	.horizentally > li:hover {
-		cursor: pointer;
-	}
+	
 	ul {
 		list-style-type: none;
 	}
 	.horizentally {
 		display: flex;
 		flex-direction: row;
-		li img {
+		li >a>img {
 			margin: 0 0.5rem;
 		}
 		.logo {
@@ -288,15 +285,18 @@ footer
 			right: 3rem;
 		}
 	}
-	li {
+	li>a {
+		display: block;
 		color: $c-white;
 		margin: 1.5rem 0;
 	}
 	.last-child {
 		display: flex;
 		flex-direction: column;
-
 		padding-left: 20%;
+		li{
+			margin: 1rem 0.5rem ;
+		}
 		.right-reserved {
 			font-size: 1rem;
 			color: $c-grayish-blue;
@@ -330,6 +330,7 @@ footer
 
 @media only screen and (max-width: $d-tablet) {
 	.footer {
+		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -347,10 +348,6 @@ footer
 		align-items: center;
 		margin: auto !important;
 		padding: 0;
-	}
-
-	li {
-		margin: 0.5rem !important;
 	}
 	.logo {
 		position: relative;
