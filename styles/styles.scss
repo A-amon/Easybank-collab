@@ -168,14 +168,14 @@ article section
 body {
 	background-color: $c-very-light-gray;
 }
-html{
+html {
 	scroll-behavior: smooth;
 }
 .article-container {
-	width: 90%;
 	margin: auto;
 	h2 {
-		margin: 2rem 1rem;
+
+		margin: 2rem 8%;
 		font-weight: $fw-bold;
 		font-size: 3rem;
 	}
@@ -183,7 +183,7 @@ html{
 		0% {
 			transform: scale(1);
 		}
-		50%{
+		50% {
 			transform: scale(1.1);
 		}
 		100% {
@@ -191,26 +191,29 @@ html{
 		}
 	}
 	&__article {
-		width:100% ;
+
+		width: 100%;
 		user-select: none;
-		max-height: 500px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
 		&__article1,
 		&__article2,
 		&__article3,
 		&__article4 {
 			margin: 1rem;
-			float: left;
+			width: 100%;
 			cursor: pointer;
 			overflow: hidden;
-			width: calc(90%/4);
 			max-height: 450px;
-			min-width: 300px;
+			max-width: 300px;
 			background-color: $c-white;
 			border-radius: 8px;
-			&:hover{
-				animation: move .5s;
+			&:hover {
+				animation: move 0.5s;
 			}
-				.img {
+			.img {
 				img {
 					width: 100%;
 					height: 15rem;
@@ -244,9 +247,7 @@ html{
 footer
 ***********/
 .footer-container {
-	clear: both;
-	position: relative;
-	top: 2rem;
+	margin-top: 4rem;
 }
 .footer {
 	margin: 0;
@@ -255,24 +256,64 @@ footer
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-
-	
-		a{
-			text-decoration: none;
+	.horizentally a {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		height: 1.5rem;
+		width: 1.5rem;
+		display: block;
+		position: relative;
+		right: 50px;
+		margin: 2rem 1rem;
+	}
+	.horizentally .fb {
+		background-image: url("../assets/icons/icon-facebook.svg");
+		&:hover {
+			background-image: url("../assets/icons/icon-facebook-green.svg");
 		}
-	
-	.about > li>a:hover,
-	.careers > li>a:hover {
+	}
+	.horizentally .yt {
+		background-image: url("../assets/icons/icon-youtube.svg");
+		&:hover {
+			background-image: url("../assets/icons/icon-youtube-green.svg");
+		}
+	}
+	.horizentally .tw {
+		background-image: url("../assets/icons/icon-twitter.svg");
+		&:hover {
+			background-image: url("../assets/icons/icon-twitter-green.svg");
+		}
+	}
+	.horizentally .pt {
+		background-image: url("../assets/icons/icon-pinterest.svg");
+		&:hover {
+			background-image: url("../assets/icons/icon-pinterest-green.svg");
+		}
+	}
+	.horizentally .ig {
+		background-image: url("../assets/icons/icon-instagram.svg");
+		&:hover {
+			background-image: url("../assets/icons/icon-instagram-green.svg");
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.about > li > a:hover,
+	.careers > li > a:hover {
 		color: $c-lime-green;
 	}
-	
+
 	ul {
 		list-style-type: none;
 	}
 	.horizentally {
 		display: flex;
 		flex-direction: row;
-		li >a>img {
+		li > a > img {
 			margin: 0 0.5rem;
 		}
 		.logo {
@@ -285,17 +326,17 @@ footer
 			right: 3rem;
 		}
 	}
-	li>a {
+	li > a {
 		display: block;
 		color: $c-white;
-		margin: 1.5rem 0;
+		margin: 1rem 0;
 	}
 	.last-child {
 		display: flex;
 		flex-direction: column;
 		padding-left: 20%;
-		li{
-			margin: 1rem 0.5rem ;
+		li {
+			margin: 1rem 0.5rem;
 		}
 		.right-reserved {
 			font-size: 1rem;
@@ -315,8 +356,8 @@ footer
 	}
 }
 @media only screen and (max-width: 1200px) {
-	.article-container{
-		&__article{
+	.article-container {
+		&__article {
 			&__article1,
 			&__article2,
 			&__article3,
@@ -325,7 +366,6 @@ footer
 			}
 		}
 	}
-	
 }
 
 @media only screen and (max-width: $d-tablet) {
@@ -364,15 +404,15 @@ footer
 		position: relative;
 		left: 3rem;
 	}
-.article-container{
-	&__article{
-		&__article1,
-		&__article2,
-		&__article3,
-		&__article4 {
-			width: 90%;
+	.article-container {
+		&__article {
+			&__article1,
+			&__article2,
+			&__article3,
+			&__article4 {
+				width: 90%;
+				max-width: 100%;
+			}
 		}
 	}
-}
-	
 }
