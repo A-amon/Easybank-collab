@@ -546,19 +546,6 @@ body {
   }
 }
 
-html {
-  font-size: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
 /**********************
 article section
 ***********************/
@@ -596,7 +583,7 @@ html {
   cursor: pointer;
   overflow: hidden;
   width: calc(90%/4);
-  max-height: 400px;
+  max-height: 450px;
   min-width: 300px;
   background-color: white;
   border-radius: 8px;

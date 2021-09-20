@@ -161,15 +161,7 @@ body {
 		transform: scale(1);
 	}
 }
-html {
-	font-size: 100%;
-	box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
+
 /**********************
 article section
 ***********************/
@@ -200,7 +192,7 @@ html{
 			cursor: pointer;
 			overflow: hidden;
 			width: calc(90%/4);
-			max-height: 400px;
+			max-height: 450px;
 			min-width: 300px;
 			background-color: $c-white;
 			border-radius: 8px;
