@@ -377,4 +377,262 @@ template {
     max-width: 1020px;
   }
 }
+
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/**********************
+article section
+***********************/
+body {
+  background-color: #fafafa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.article-container {
+  width: 90%;
+  margin: auto;
+}
+
+.article-container h2 {
+  margin: 2rem 1rem;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.article-container__article {
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  max-height: 500px;
+}
+
+.article-container__article__article1, .article-container__article__article2, .article-container__article__article3, .article-container__article__article4 {
+  margin: 1rem;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+  width: calc(90%/4);
+  max-height: 400px;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.article-container__article__article1:hover, .article-container__article__article2:hover, .article-container__article__article3:hover, .article-container__article__article4:hover {
+  border: 5px solid transparent;
+}
+
+.article-container__article__article1 .img img, .article-container__article__article2 .img img, .article-container__article__article3 .img img, .article-container__article__article4 .img img {
+  width: 100%;
+  max-height: 15rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.article-container__article__article1 h3, .article-container__article__article2 h3, .article-container__article__article3 h3, .article-container__article__article4 h3 {
+  font-weight: 400;
+}
+
+.article-container__article__article1 .auth, .article-container__article__article2 .auth, .article-container__article__article3 .auth, .article-container__article__article4 .auth {
+  font-size: 0.9rem;
+}
+
+.article-container__article__article1 p, .article-container__article__article2 p, .article-container__article__article3 p, .article-container__article__article4 p {
+  background-color: white;
+  padding: 0 1rem;
+  color: #9698a6;
+}
+
+.article-container__article__article1 h3, .article-container__article__article2 h3, .article-container__article__article3 h3, .article-container__article__article4 h3 {
+  background-color: white;
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.article-container__article__article1 h3:hover, .article-container__article__article2 h3:hover, .article-container__article__article3 h3:hover, .article-container__article__article4 h3:hover {
+  color: #31d35c;
+  cursor: pointer;
+}
+
+/**********
+footer
+***********/
+.footer-container {
+  clear: both;
+  position: relative;
+  top: 2rem;
+}
+
+.footer {
+  height: 250px;
+  margin: 0;
+  padding: 2rem;
+  background: #2d314d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer .about > li:hover,
+.footer .careers > li:hover {
+  color: #31d35c;
+  cursor: pointer;
+}
+
+.footer .horizentally > li:hover {
+  cursor: pointer;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer .horizentally {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer .horizentally li img {
+  margin: 0 0.5rem;
+}
+
+.footer .horizentally .logo {
+  position: relative;
+  right: 2rem;
+  left: 5rem !important;
+}
+
+.footer .horizentally img:first-child {
+  position: relative;
+  right: 3rem;
+}
+
+.footer li {
+  color: white;
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+}
+
+.footer .last-child {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20%;
+}
+
+.footer .last-child .right-reserved {
+  font-size: 1rem;
+  color: #9698a6;
+}
+
+.footer .last-child li button {
+  padding: 0.8rem 1.8rem;
+  border-radius: 22px;
+  border: none;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#48bfe4));
+  background-image: linear-gradient(to right, #31d35c, #48bfe4);
+}
+
+.footer .last-child li button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#98ecc5));
+  background-image: linear-gradient(to right, #31d35c, #98ecc5);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .article-container__article__article1, .article-container__article__article2, .article-container__article__article3, .article-container__article__article4 {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
+  .about {
+    padding: 0;
+    margin: auto;
+  }
+  ul {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto !important;
+    padding: 0;
+  }
+  li {
+    margin: 0.5rem !important;
+  }
+  .logo {
+    position: relative;
+    right: 1rem;
+  }
+  .last-child {
+    width: 100%;
+    padding: 0 !important;
+  }
+  .last-child button {
+    padding: 0.8rem 1.9rem !important;
+  }
+  .horizentally {
+    position: relative;
+    left: 3rem;
+  }
+  .article-container__article__article1, .article-container__article__article2, .article-container__article__article3, .article-container__article__article4 {
+    width: 90%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
