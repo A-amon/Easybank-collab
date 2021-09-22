@@ -393,18 +393,6 @@ template {
   }
 }
 
-.navbar__menu-hidden {
-  display: block;
-}
-
-.navbar-show .navbar__menu-open {
-  display: block;
-}
-
-.navbar__menu:not(.navbar-show).navbar__menu-close {
-  display: block;
-}
-
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -534,7 +522,7 @@ template {
   }
 }
 
-.navbar__btn-link {
+.btn-link {
   display: none;
   font-size: 0.875rem;
   font-weight: 700;
@@ -552,14 +540,14 @@ template {
   opacity: 1;
 }
 
-.navbar__btn-link:hover {
+.btn-link:hover {
   opacity: 0.6;
   -webkit-transform: scaleX(1.1);
           transform: scaleX(1.1);
 }
 
 @media screen and (min-width: 1020px) {
-  .navbar__btn-link {
+  .btn-link {
     display: inline-block;
   }
 }
@@ -569,10 +557,10 @@ template {
 */
 .hero-section {
   background-color: #fafafa;
-  padding-top: 6rem;
 }
 
 .hero {
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -596,30 +584,34 @@ template {
 
 .hero__img-container {
   width: 100%;
+  overflow: hidden;
   display: inline-block;
   text-align: center;
+  position: relative;
 }
 
 .hero__img-container::before {
   content: "";
   width: 100%;
-  height: 43%;
+  height: 100%;
   background-image: url(../assets/images/bg-intro-mobile.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   position: absolute;
-  top: 100%;
+  top: 0;
   right: 0;
   left: 0;
 }
 
 .hero__mockups {
   width: 100%;
-  -webkit-transform: translateY(-15rem);
-          transform: translateY(-15rem);
+  -webkit-transform: translateY(-7rem);
+          transform: translateY(-7rem);
 }
 
 .hero__content {
+  max-width: 500px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -676,36 +668,6 @@ template {
     margin: 0;
     text-align: start;
     max-width: 85%;
-  }
-}
-
-.hero__btn-link {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 700;
-  padding: 0.8rem 1.675rem;
-  border-radius: 6rem;
-  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
-  background: linear-gradient(to right, #31d35c, #2bb7da);
-  text-decoration: none;
-  color: white;
-  font-family: "Public Sans", sans-serif;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  opacity: 1;
-}
-
-.hero__btn-link:hover {
-  opacity: 0.6;
-  -webkit-transform: scaleX(1.1);
-          transform: scaleX(1.1);
-}
-
-@media screen and (min-width: 1020px) {
-  .hero__btn-link {
-    display: inline-block;
   }
 }
 
