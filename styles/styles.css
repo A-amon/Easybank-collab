@@ -387,6 +387,135 @@ body {
 }
 
 /*******************
+* HERO SECTION
+********************/
+.hero {
+  text-align: center;
+  background-color: #f3f4f6;
+}
+
+.hero__col--image {
+  position: relative;
+  z-index: 0;
+}
+
+.hero__col--image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/bg-intro-mobile.svg");
+  z-index: -1;
+}
+
+.hero__img-container {
+  overflow: hidden;
+}
+
+.hero__img {
+  width: 100%;
+  margin-top: -35%;
+}
+
+.hero__title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #2d314d;
+}
+
+.hero__desc {
+  color: #9698a6;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 1020px) {
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+    height: 600px;
+    /*
+		* Reset container's padding
+		*/
+    /*
+		* Push phone image upwards
+		*/
+    /*
+		* Push phone image to right
+		*/
+  }
+  .hero .container {
+    padding: 0;
+  }
+  .hero__col {
+    height: 100%;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero__col--image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .hero__col--image::before {
+    width: 100%;
+    background-size: 150%;
+    background-position: left bottom;
+    background-image: url("../assets/images/bg-intro-desktop.svg");
+  }
+  .hero__col--text .container {
+    padding-left: 5rem;
+  }
+  .hero__img-container {
+    position: absolute;
+    top: -15%;
+    left: 0;
+    width: 100%;
+  }
+  .hero__img {
+    width: 100%;
+    margin-top: 0;
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
+  }
+  .hero__title {
+    font-size: 3.3rem;
+  }
+  .hero__desc {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    /*
+		* Increase padding to try to match other sections' shorter width
+		*/
+  }
+  .hero__col--text .container {
+    padding-left: 10rem;
+  }
+}
+
+/*******************
 * WHY SECTION
 ********************/
 .why {
