@@ -1,27 +1,24 @@
-const menuOpen = document.querySelector(".navbar__open")
-const menuClose = document.querySelector(".navbar__close")
-const mainMenu = document.querySelector(".navbar__list")
-const navbarMenu = document.querySelector(".navbar__menu")
-const navigator = document.querySelector(".navbar")
-const overlay = document.querySelector(".overlay")
-/*
-* Show/ hide nav dropdown
 
-* Handle hamburger button click event  
-*/
-navbarMenu.addEventListener("click", function () {
-    navbarMenu.classList.toggle("navbar__show")
-    navbarMenu.classList.toggle("navbar__menu-close")
-    mainMenu.classList.toggle("navbar__list-drop")
+const navbarMenu = document.querySelector('.navbar__menu')
+const navbarList = document.querySelector('.navbar__list')
+const hamburger = document.querySelector('.navbar__menu-hamburger')
+const mockUp = document.querySelector('.hero__mockups')
+const overlay = document.querySelector('.overlay')
+const hero = document.querySelector('.hero-section')
+const close = document.querySelector('.navbar__menu-close')
+navbarMenu.addEventListener('click', () => {
+    navbarList.classList.toggle("toggle");
+    hamburger.classList.toggle("hide");
+    navbarList.classList.toggle("hide");
+    close.classList.toggle("change")
+    mockUp.classList.toggle('hide');
+    // hero.classList.toggle('overlay');
 
-    // document.querySelector(".overlay").remove(".active")
-    // document.body.classList.toggle('overlay')
+    toggleScroll();
 
-
-    toggleScroll()
-})
+});
+//  *stop-scroll/
 const toggleScroll = () => {
-
     document.body.classList.toggle('hide-scroll')
 
 
