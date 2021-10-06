@@ -189,6 +189,7 @@ body {
 * button component
 */
 .btn-link {
+	border: none;
 	font-size: 0.875rem;
 	font-weight: 700;
 	padding: 0.8rem 1.675rem;
@@ -691,17 +692,17 @@ footer
 			font-size: 1rem;
 			color: $c-grayish-blue;
 		}
-		li button {
-			padding: 0.8rem 1.8rem;
-			border-radius: 22px;
-			border: none;
-			color: $c-white;
-			background-image: linear-gradient(to right, $c-lime-green, rgb(72, 191, 228));
-			&:hover {
-				background-image: linear-gradient(to right, $c-lime-green, rgb(152, 236, 197));
-				cursor: pointer;
-			}
-		}
+		// li button {
+		// 	padding: 0.8rem 1.8rem;
+		// 	border-radius: 22px;
+		// 	border: none;
+		// 	color: $c-white;
+		// 	background-image: linear-gradient(to right, $c-lime-green, rgb(72, 191, 228));
+		// 	&:hover {
+		// 		background-image: linear-gradient(to right, $c-lime-green, rgb(152, 236, 197));
+		// 		cursor: pointer;Fbtn
+		// 	}
+		// }
 	}
 }
 @media only screen and (max-width: 1200px) {
